@@ -35,7 +35,7 @@ const { ind } = require('./language')
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Affis Admin\n' 
+            + 'FN:Hans\n' 
             + 'ORG: Pengembang XBot;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
             + 'END:VCARD' 
@@ -43,7 +43,7 @@ blocked = []
 prefix = '#'
 limitawal = 30
 memberlimit = 0
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*_Official Account GetonBot V.4.1_*'
 /*************************************/
 
 /******** OWNER NUMBER**********/
@@ -358,50 +358,70 @@ client.on('group-participants-update', async (anu) => {
 			}
 	        /*****************END SCURITY FEATURE ********/
 			
-			//function rank 
-			const levelRole = getLevelingLevel(sender, _level)
-   	     var role = 'Trainee'
-   	     if (levelRole <= 3) {
-   	         role = 'senior trainee'
-   	     } else if (levelRole <= 5) {
-   	         role = 'private'
-   	     } else if (levelRole <= 7) {
-   	         role = 'corporal'
-   	     } else if (levelRole <= 8) {
-   	         role = 'Sergeant'
-   	     } else if (levelRole <= 9) {
-   	         role = 'staff sgt I'
-   	     } else if (levelRole <= 10) {
-   	         role = 'staff sgt II'
-   	     } else if (levelRole <= 11) {
-   	         role = 'staff sgt II'
-   	     } else if (levelRole <= 12) {
-   	         role = 'Sgt 1st class I'
-   	     } else if (levelRole <= 13) {
-   	         role = 'Sgt 1st class II'
-   	     } else if (levelRole <= 14) {
-   	         role = 'Sgt 1st class III'
-   	     } else if (levelRole <= 14) {
-   	         role = 'Ggt 1st class IV'
-   	     } else if (levelRole <= 15) {
-   	         role = 'Master sgt I'
-   	     } else if (levelRole <= 16) {
-   	         role = 'Master sgt II'
-   	     } else if (levelRole <= 17) {
-   	         role = 'Master sgt III'
-   	     } else if (levelRole <= 18) {
-   	         role = 'Master sgt IV'
-   	     } else if (levelRole <= 19) {
-   	         role = 'Master sgt V'
-   	     } else if (levelRole <= 20) {
-   	         role = '2nd Lt I'
-   	     } else if (levelRole <= 21) {
-   	         role = '2nd Lt II'
-   	     } else if (levelRole <= 22) {
-   	         role = '2nd Lt III'
-   	     } else if (levelRole <= 23) {
-   	         role = '2nd Lt IV'
-   	     }
+			//role level
+        const levelRole = getLevelingLevel(sender)
+        var role = 'Bronze V'
+        if (levelRole <= 3) {
+            Rank = 'Bronze IV'
+        } else if (levelRole <= 5) {
+            Rank = 'Bronze III'
+        } else if (levelRole <= 7) {
+            Rank = 'Bronze II'
+        } else if (levelRole <= 9) {
+            Rank = 'Bronze I'
+        } else if (levelRole <= 10) {
+            Rank = 'Silver V'
+        } else if (levelRole <= 11) {
+            Rank = 'Silver IV'
+        } else if (levelRole <= 12) {
+            Rank = 'Silver III'
+        } else if (levelRole <= 13) {
+            Rank = 'Silver II'
+        } else if (levelRole <= 13) {
+            Rank = 'Silver I'
+        } else if (levelRole <= 16) {
+            Rank = 'Gold V'
+        } else if (levelRole <= 17) {
+            Rank = 'Gold IV'
+        } else if (levelRole <= 19) {
+            Rank = 'Gold III'
+        } else if (levelRole <= 20) {
+            Rank = 'Gold II'
+        } else if (levelRole <= 21) {
+            Rank = 'Gold I'
+        } else if (levelRole <= 22) {
+            Rank = 'Platinum V'
+        } else if (levelRole <= 24) {
+            Rank = 'Platinum IV'
+        } else if (levelRole <= 25) {
+            Rank = 'Platinum III'
+        } else if (levelRole <= 26) {
+            Rank = 'Platinum II'
+        } else if (levelRole <= 27) {
+            Rank = 'Platinum I'
+        } else if (levelRole <= 30) {
+            Rank = 'Diamond V'
+        } else if (levelRole <= 31) {
+            Rank = 'Diamond lV'
+        } else if (levelRole <= 32) {
+            Rank = 'Diamond lll'
+        } else if (levelRole <= 33) {
+            Rank = 'Diamond ll'
+        } else if (levelRole <= 34) {
+            role = 'Diamond l'
+        } else if (levelRole <= 35) {
+            role = 'Master V'
+        } else if (levelRole <= 36) {
+            role = 'Master lV'
+        } else if (levelRole <= 37) {
+            role = 'Master lll'
+        } else if (levelRole <= 38) {
+            role = 'Master ll'
+        } else if (levelRole <= 39) {
+            role = 'Master l'
+        } else if (levelRole <= 99) {
+            role = 'GM'
+        }
    
 			var premi = '*X*'
 			if (isPrem) {
