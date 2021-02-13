@@ -23,7 +23,7 @@ exports.lvlnoon = () => {
 }
 
 exports.noregis = () => {
-	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar affis|17*`
+	return`*「 BELUM DAFTAR 」*\n\n*cara daftar ${prefix}daftar nama|umur* \n*contoh ${prefix}daftar ${pushname}|17*`
 }
 
 exports.rediregis = () => {
@@ -125,7 +125,7 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *Level* : ${getLevelingLevel(sender)}
 ┣⊱ *Role* : ${role}
 ┣⊱ *User register* : ${_registered.length}
-┗━━━⊱  ⸨ *AFFIS* ⸩  ⊰━━━━┛
+┗━━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 
  *${prefix}info*
  *${prefix}donasi*
@@ -217,18 +217,29 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ┣⊱ *${prefix}event* [1/0]
 ┣⊱ *${prefix}clone* <tag>
 ┣⊱ *${prefix}setppbot*
-┣━━⊱ *THANGKS TO* ⊰━━┫
-┃
-┣⊱ *AFFIS JUNIANTO* <dev>
-┣⊱ *FADHIL GRAPHY* <partner>
-┣⊱ *MHANKBARBARS* <sc ori>
-┣⊱ *MYBOT TEAM* <team>
-┃
-┣⊱ NOTE : TQTO DI HAPUS
-┃ GW GAK UP LAGI OKE
-┃
-┗━━⊱  ⸨ *X-BOT* ⸩  ⊰━━━━┛
-`
+┣━━⊱ *OWNER MENU* ⊰━┫
+┣⊱ *${prefix}setreply* *<teks>*
+┣⊱ *${prefix}setprefix* *<symbol>*
+┣⊱ *${prefix}clearall*
+┣⊱ *${prefix}block* <tag>
+┣⊱ *${prefix}unblock* <tag>
+┣⊱ *${prefix}leave*
+┣⊱ *${prefix}event* [1/0]
+┣⊱ *${prefix}clone* <tag>
+┣⊱ *${prefix}setppbot*
+┣━━⊱ *THANKS TO* ⊰━━┫
+┣⊱ *Acil* *<GAY>*
+┣⊱ *Affis* *<GAY>*
+┣⊱ *HANS* *<GAY>*
+┣⊱ *Kevin* *<GAY>*
+┣⊱ *Rofek* *<GAY>*
+┣⊱ *Rakha* *<GAY>*
+┣⊱ *Amrul* *<GAY>*
+┣⊱ *Nabila* *<Cans>*
+┣⊱ *Berlian* *<Cans>*
+┣⊱ *Naya* *<Cans>*
+┣⊱ *AYBB TEAM Bot* *<team>*
+┗━━⊱  ⸨ *GetonBot* ⸩  ⊰━━━━┛
 }
 
 exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel, role) => {
@@ -266,14 +277,14 @@ exports.premadd = (pnom) => {
 	return`*「 PREMIUM ADD 」*
 
 *Name* : ${pnom}
-*Expired* : 30 DAY\n*thank for order premium*`
+*Expired* : 30 DAY\n*Thanks Udah Beli Premium(≧▽≦)*`
 }
 
 exports.dellprem = (hnom) => {
 	return`*「 PREMIUM DELETE 」*
 
 *Name* : ${hnom}
-*Expired* : NOW:v\n*thank for order premium back soon for buying again:D*`
+*Expired* : 0\n*Yah masa aktif premium kamu sudah habis( ꈍᴗꈍ),ayo beli premium lagi cok!*`
 }
 
 exports.premon = (pushname) => {
